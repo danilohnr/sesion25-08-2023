@@ -24,5 +24,23 @@ public class App {
         deduccionSindicato = salarioBruto * (tasaSindicato/100);
         deduccionesTotales = deduccionINSS + deduccionIR + deduccionSindicato;
         ingresoNeto = ingresoTotal - deduccionesTotales;
+        deduccionINSSPatronal = ingresoTotal * (tasaINSSPatronal/100);
+        //Presentar resultados
+        System.out.println("Reporte de salario mensual");
+        System.out.println(":::::::::::::::::::::::::::::");
+        System.out.println("Salario bruto: C$" + salarioBruto);
+        System.out.println("Ingresos por antiguedad: C$" + ingresoAntiguedad);
+        System.out.println("Ingresos totales: C$" + ingresoTotal);
+        System.out.println(":::::::::::::::::::::::::::::");
+        System.out.println("Deduccion por INSS: C$" + deduccionINSS);
+        System.out.println("Deduccion por IR: C$" + deduccionIR);
+        System.out.println("Deduccion por afiliacion al sindicato: C$" + deduccionSindicato);
+        System.out.println("Deducciones totales: C$" + deduccionesTotales);
+        System.out.println(":::::::::::::::::::::::::::::");
+        System.out.println("Ingreso neto: C$" + ingresoNeto);
+        System.out.println(":::::::::::::::::::::::::::::");
+        System.out.println("Deduccion a la empresa (INSS Patronal) C$" + deduccionINSSPatronal);
+        System.out.println("Gracias por utilizar esta App.");
+        lector.close();
     }
 }
